@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://y0iml5is3sik"]
+
+[ext_resource type="Script" uid="uid://c1tdqb2miv58a" path="res://assets/sand_wall_copper.gd" id="1_ca0ea"]
+[ext_resource type="Resource" uid="uid://bnsl4phvtwduy" path="res://resources/conveyor_items/copper.tres" id="2_s3mqc"]
+[ext_resource type="Texture2D" uid="uid://bkkaql7r4kat1" path="res://assets/sand_wall_copper.png" id="3_82e7u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smog4"]
+size = Vector2(16, 16)
+
+[node name="SandWall" type="Node2D"]
+script = ExtResource("1_ca0ea")
+resource = ExtResource("2_s3mqc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_82e7u")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.125, -0.125)
+shape = SubResource("RectangleShape2D_smog4")

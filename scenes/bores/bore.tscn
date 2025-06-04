@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://bclbsowidielw"]
+
+[ext_resource type="Script" uid="uid://bta2oh3re168" path="res://scenes/bores/bore.gd" id="1_5a6v8"]
+[ext_resource type="Resource" uid="uid://c2dva64koj47x" path="res://resources/inventory_slot/bore_inventory.tres" id="2_fbav4"]
+[ext_resource type="Texture2D" uid="uid://bwoswgn7q0ai0" path="res://assets/bore.png" id="2_ivhk6"]
+
+[node name="Bore" type="Node2D"]
+script = ExtResource("1_5a6v8")
+inventory = ExtResource("2_fbav4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ivhk6")
+
+[node name="RayCast_1" type="RayCast2D" parent="."]
+position = Vector2(0, -6)
+target_position = Vector2(100, 0)
+
+[node name="RayCast_2" type="RayCast2D" parent="."]
+position = Vector2(0, 6)
+target_position = Vector2(100, 0)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 21.0
+offset_top = 22.0
+offset_right = 37.0
+offset_bottom = 38.0
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 34.0
+offset_top = 26.0
+offset_right = 44.0
+offset_bottom = 49.0
+scale = Vector2(0.5, 0.5)
+
+[connection signal="mouse_entered" from="Control" to="." method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="Control" to="." method="_on_control_mouse_exited"]

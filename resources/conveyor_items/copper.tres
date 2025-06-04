@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Mineable" load_steps=3 format=3 uid="uid://bnsl4phvtwduy"]
+
+[ext_resource type="Script" uid="uid://c8omlyslkyuhq" path="res://resources/conveyor_items/conveyor_item.gd" id="1_rnga1"]
+[ext_resource type="Texture2D" uid="uid://fpfrk1xaw3h1" path="res://assets/copper.png" id="2_wrgos"]
+
+[resource]
+script = ExtResource("1_rnga1")
+texture = ExtResource("2_wrgos")
+id = 1
+metadata/_custom_type_script = "uid://c8omlyslkyuhq"

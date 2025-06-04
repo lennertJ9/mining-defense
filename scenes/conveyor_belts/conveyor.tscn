@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6mhtjlf2gmoj"]
+
+[ext_resource type="Script" uid="uid://bfve62jngrmv" path="res://scenes/conveyor_belts/conveyor.gd" id="1_nvvke"]
+[ext_resource type="Texture2D" uid="uid://dwe1mpdt8kdcr" path="res://assets/conveyor.png" id="2_13asp"]
+
+[node name="Conveyor" type="Node2D"]
+script = ExtResource("1_nvvke")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("2_13asp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
