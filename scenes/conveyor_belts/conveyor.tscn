@@ -3,14 +3,24 @@
 [ext_resource type="Script" uid="uid://bfve62jngrmv" path="res://scenes/conveyor_belts/conveyor.gd" id="1_nvvke"]
 [ext_resource type="Texture2D" uid="uid://dwe1mpdt8kdcr" path="res://assets/conveyor.png" id="2_13asp"]
 
-[node name="Conveyor" type="Node2D"]
+[node name="Conveyor" type="Sprite2D"]
+texture = ExtResource("2_13asp")
 script = ExtResource("1_nvvke")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -1
-texture = ExtResource("2_13asp")
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 19.0
+offset_bottom = 24.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[connection signal="mouse_entered" from="Control" to="." method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="Control" to="." method="_on_control_mouse_exited"]

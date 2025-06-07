@@ -22,6 +22,7 @@ var mine_timer: float = 0
 
 
 
+
 func _physics_process(delta: float) -> void:
 	var collider = ray_cast_1.get_collider()
 	
@@ -34,11 +35,6 @@ func _physics_process(delta: float) -> void:
 			label.text = str(inventory.amount)
 
 
-
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("debug"):
-		print(inventory.conveyor_item)
-		print(inventory.amount)
 
 
 
@@ -56,4 +52,3 @@ func _on_control_mouse_exited() -> void:
 		label.visible = false
 		
 		texture_rect.texture = null
-		

@@ -13,7 +13,11 @@ config_version=5
 config/name="mining defense"
 run/main_scene="uid://d1bk3qivcrwsn"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+
+[autoload]
+
+ConveyorBeltManager="*res://scenes/conveyor_belt_manager/conveyor_belt_manager.gd"
+ItemRenderer="*res://scenes/item_renderer/item_renderer.tscn"
 
 [display]
 
@@ -23,6 +27,7 @@ window/size/viewport_height=972
 [file_customization]
 
 folder_colors={
+"res://assets/": "orange",
 "res://resources/": "purple",
 "res://scenes/": "red"
 }

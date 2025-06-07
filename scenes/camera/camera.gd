@@ -3,7 +3,7 @@ extends Camera2D
 
 var SCROLL_MARGIN_X 
 var SCROLL_MARGIN_Y
-const SCROLL_SPEED = 800
+const SCROLL_SPEED = 2000
 
 
 func _ready() -> void:
@@ -17,19 +17,19 @@ func _process(delta: float) -> void:
 	var direction := Vector2.ZERO
 	var distance = mouse_pos - screen_center
 	
-	if abs(distance.x) > SCROLL_MARGIN_X:
-		direction.x = sign(distance.x)
-	
-	if abs(distance.y) > SCROLL_MARGIN_Y:
-		direction.y = sign(distance.y)
+	#if abs(distance.x) > SCROLL_MARGIN_X:
+		#direction.x = sign(distance.x)
+	#
+	#if abs(distance.y) > SCROLL_MARGIN_Y:
+		#direction.y = sign(distance.y)
 	
 		
 	position += direction.normalized() * SCROLL_SPEED * delta
 
 
 func update_margin():
-	SCROLL_MARGIN_X = get_viewport_rect().size.x * 0.475
-	SCROLL_MARGIN_Y = get_viewport_rect().size.y * 0.475
+	SCROLL_MARGIN_X = get_viewport_rect().size.x * 0.495
+	SCROLL_MARGIN_Y = get_viewport_rect().size.y * 0.495
 
 
 
