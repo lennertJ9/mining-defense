@@ -9,6 +9,7 @@ var belt_array: Array[ConveyorBelt]
 func register_belt(belt: Node2D):
 	var grid_pos: Vector2 = Vector2(belt.global_position / 16).floor()
 	belt_grid[grid_pos] = belt
+	belt_array = belt_grid.values()
 
 
 

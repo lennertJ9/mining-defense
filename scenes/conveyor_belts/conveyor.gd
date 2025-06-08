@@ -5,7 +5,7 @@ class_name ConveyorBelt
 @export var slots: Array[ConveyorItem] = []
 var item_offsets: Array[float] = [0.0, 0.0, 0.0]
 var grid_size: float = 5.3
-var belt_speed: float = 2.0
+var belt_speed: float = 20.0
 const COPPER = preload("res://resources/conveyor_items/copper.tres")
 
 
@@ -74,7 +74,7 @@ func _on_control_mouse_entered() -> void:
 	label.text = show_holding_items()
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		slots[2] = COPPER
-		slots[0] = COPPER
+		#slots[0] = COPPER
 		
 		print('add')
 
