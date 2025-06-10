@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0n4i76spj1ao"]
+
+[ext_resource type="Texture2D" uid="uid://dwe1mpdt8kdcr" path="res://assets/conveyor.png" id="1_tq7yw"]
+[ext_resource type="Script" uid="uid://5v8uhn53yqad" path="res://user_interface/building_menu/building_slot/building_slot.gd" id="2_0v228"]
+
+[node name="TextureRect" type="TextureRect"]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("1_tq7yw")
+stretch_mode = 2
+script = ExtResource("2_0v228")

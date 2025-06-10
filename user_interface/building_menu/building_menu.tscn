@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctht0gb32dv5"]
+
+[ext_resource type="PackedScene" uid="uid://d0n4i76spj1ao" path="res://user_interface/building_menu/building_slot/building_slot.tscn" id="1_hllcj"]
+
+[sub_resource type="Gradient" id="Gradient_hllcj"]
+offsets = PackedFloat32Array(0.00699301, 1)
+colors = PackedColorArray(0.194349, 0.194349, 0.194349, 1, 0.241156, 0.241156, 0.241156, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1t4lw"]
+gradient = SubResource("Gradient_hllcj")
+width = 32
+
+[node name="BuildingMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 64.0
+offset_top = -1.0
+offset_right = 128.0
+offset_bottom = 63.0
+rotation = 1.5708
+texture = SubResource("GradientTexture1D_1t4lw")
+
+[node name="GridContainer" type="GridContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -29.0
+offset_top = 7.0
+offset_right = 11.0
+offset_bottom = 47.0
+grow_horizontal = 2
+
+[node name="Slot_1" parent="TextureRect/GridContainer" instance=ExtResource("1_hllcj")]
+layout_mode = 2
+building = "conveyor"

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7vbnsj5gxyfl"]
+
+[ext_resource type="Script" uid="uid://bb1v5jcwy5kht" path="res://user_interface/user_interface.gd" id="1_dbod7"]
+[ext_resource type="PackedScene" uid="uid://ctht0gb32dv5" path="res://user_interface/building_menu/building_menu.tscn" id="2_ur1vw"]
+
+[node name="UserInterface" type="CanvasLayer"]
+script = ExtResource("1_dbod7")
+
+[node name="BuildingMenu" parent="." instance=ExtResource("2_ur1vw")]
+offset_left = 568.0
+offset_top = 283.0
+offset_right = 568.0
+offset_bottom = 283.0

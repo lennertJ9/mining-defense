@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce2wc4lann8vq"]
+
+[ext_resource type="Script" uid="uid://cjgcphwo0bs7t" path="res://scenes/managers/conveyor_belt_manager/conveyor_belt_manager.gd" id="1_hno6b"]
+
+[node name="ConveyorBeltManager" type="Node2D"]
+script = ExtResource("1_hno6b")

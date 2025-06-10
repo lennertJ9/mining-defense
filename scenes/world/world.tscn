@@ -70,7 +70,7 @@ tile_set = SubResource("TileSet_pkg7o")
 
 [node name="Camera" parent="." instance=ExtResource("6_dlabj")]
 
-[node name="Conveyors" type="TileMapLayer" parent="."]
+[node name="Buildings" type="TileMapLayer" parent="."]
 z_index = 1
 tile_map_data = PackedByteArray("AAALAPz/AAAAAAAAAQAKAPz/AAAAAAAAAQAJAPz/AAAAAAAAAQAIAPz/AAAAAAAAAQAHAPz/AAAAAAAAAQAGAPz/AAAAAAAAAQAFAPz/AAAAAAAAAQAEAPz/AAAAAAAAAQA=")
 tile_set = SubResource("TileSet_gbfbk")

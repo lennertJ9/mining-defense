@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://banixrupd1ov4"]
+
+[ext_resource type="Script" uid="uid://d3hyn5h63uild" path="res://scenes/managers/builder_manager/builder_manager.gd" id="1_e5w7a"]
+
+[node name="BuilderManager" type="Node2D"]
+z_index = 2
+script = ExtResource("1_e5w7a")
