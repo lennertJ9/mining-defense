@@ -5,3 +5,6 @@
 [node name="BuilderManager" type="Node2D"]
 z_index = 2
 script = ExtResource("1_e5w7a")
+
+[node name="Preview" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.741176)

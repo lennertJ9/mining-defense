@@ -6,8 +6,6 @@ extends Node2D
 func _process(delta: float) -> void:
 	render_items()
 
-
-
 func render_items():
 	copper.multimesh.instance_count = count_draw()
 	var item_instance = 0

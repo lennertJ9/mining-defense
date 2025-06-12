@@ -42,9 +42,9 @@ func zoom_out():
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("mouse_scroll_up"):
+	if event.is_action_pressed("mouse_scroll_up") and not BuilderManager.is_building:
 		zoom_in()
-	if event.is_action_pressed("mouse_scroll_down"):
+	if event.is_action_pressed("mouse_scroll_down") and not BuilderManager.is_building:
 		zoom_out()
 	
 	

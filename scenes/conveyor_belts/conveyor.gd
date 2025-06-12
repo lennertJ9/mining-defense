@@ -9,14 +9,26 @@ var belt_speed: float = 20.0
 const COPPER = preload("res://resources/conveyor_items/copper.tres")
 
 
-var direction = Vector2.LEFT
+var direction = Vector2.RIGHT
 
 
 func _ready() -> void:
 	ConveyorBeltManager.register_belt(self)
 	slots.resize(3)
-	#ItemRenderer.draw(self)
-
+	var rotated = (int(rotation_degrees) % 360 + 360) % 360
+	
+	if rotated == 0:
+		direction = Vector2.RIGHT
+		
+	elif rotated == 90:
+		direction = Vector2.DOWN
+		
+	elif rotated == 180:
+		direction = Vector2.LEFT
+		
+	elif rotated == 270:
+		direction = Vector2.UP
+	
 
 
 func _process(delta: float) -> void:
@@ -76,7 +88,7 @@ func _on_control_mouse_entered() -> void:
 		slots[2] = COPPER
 		#slots[0] = COPPER
 		
-		print('add')
+		
 
 
 func _on_control_mouse_exited() -> void:
